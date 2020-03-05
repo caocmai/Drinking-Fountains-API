@@ -53,5 +53,11 @@ router.post('/login', (req, res) => {
     });
   })
 
+  // LOGOUT
+router.get('/logout', (req, res) => {
+    res.clearCookie('pToken');
+    return res.send({status: 200, message:"Success: Logged out"});
+  })
+
 
 module.exports = router;

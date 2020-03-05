@@ -8,8 +8,7 @@ const FountainSchema = new Schema({
   zip_code: { type: Number },
   longitude: { type: Number },
   latitude: { type: Number },
-  number_of_spouts: { type: Number },
-
+  number_of_spouts: { type: Number }
 })
 
 Fountain = mongoose.model('Fountain', FountainSchema);
