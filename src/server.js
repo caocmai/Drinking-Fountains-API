@@ -4,7 +4,6 @@
 require('dotenv').config();
 require('./data/database');
 
-
 const app = require('./config/express');
 
 const port = process.env.PORT || 3000
@@ -32,7 +31,7 @@ const port = process.env.PORT || 3000
 if (!module.parent) {
   // listen on port config.port
   app.listen(port, () => {
-    console.info(`server started on port ${process.env.PORT} (${process.env.NODE_ENV})`); // eslint-disable-line no-console
+    console.info(`server started on port http://localhost:${process.env.PORT} (${process.env.NODE_ENV})`); // eslint-disable-line no-console
   });
 }
 
