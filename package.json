@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Boilerplate application for building REST APIs using express, mongoose in ES6 with code coverage",
   "author": "Cao Mai <cao.mai@students.makeschool.com>",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "private": false,
   "engines": {
     "node": ">=8.10.0",
@@ -11,7 +11,7 @@
     "yarn": ">=1.5.1"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/server.js",
     "start:debug": "cross-env DEBUG=auth-api-starterpack:* yarn start",
     "lint": "esw *.js server config --color",
     "lint:watch": "yarn lint -- --watch",

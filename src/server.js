@@ -1,7 +1,9 @@
-const mongoose = require('mongoose');
-const util = require('util');
+// const mongoose = require('mongoose');
+// const util = require('util');
 
 require('dotenv').config();
+require('./data/database');
+
 
 const app = require('./config/express');
 const router = require('./controllers/thing.js');
@@ -13,17 +15,16 @@ const port = process.env.PORT || 3000
 require('./controllers/thing.js')(app);
 
 
-mongoose.Promise = Promise;
-
+// mongoose.Promise = Promise;
 // connect to mongo db
-const mongoUri = process.env.MONGO_HOST;
-mongoose.connect(
-  mongoUri,
-  { server: { socketOptions: { keepAlive: 1 } } }
-);
-mongoose.connection.on('error', () => {
-  throw new Error(`unable to connect to database: ${mongoUri}`);
-});
+// const mongoUri = process.env.MONGO_HOST;
+// mongoose.connect(
+//   mongoUri,
+//   { server: { socketOptions: { keepAlive: 1 } } }
+// );
+// mongoose.connection.on('error', () => {
+//   throw new Error(`unable to connect to database: ${mongoUri}`);
+// });
 
 // # TODO: Any additional config changes belong here.
 
