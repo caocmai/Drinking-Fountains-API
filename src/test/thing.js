@@ -23,7 +23,7 @@ describe('## Thing APIs', () => {
 
   it('should load homepage', () => {
     chai.request(app)
-      .get('/api/thing')
+      .get('/api/fountain')
       .end((err, res) => {
         if (err) {
           return done(err);
@@ -32,4 +32,8 @@ describe('## Thing APIs', () => {
         return done();
       })
   })
+
+
+  
+
 });

@@ -6,6 +6,13 @@ require('dotenv').config();
 const app = require('./config/express');
 const router = require('./controllers/thing.js');
 
+const port = process.env.PORT || 3000
+
+
+//Need to add this if using the app.get routing, instead of route.get
+require('./controllers/thing.js')(app);
+
+
 mongoose.Promise = Promise;
 
 // connect to mongo db
@@ -27,7 +34,7 @@ app.use(router);
 // src: https://github.com/mochajs/mocha/issues/1912
 if (!module.parent) {
   // listen on port config.port
-  app.listen(process.env.PORT, () => {
+  app.listen(port, () => {
     console.info(`server started on port ${process.env.PORT} (${process.env.NODE_ENV})`); // eslint-disable-line no-console
   });
 }

@@ -2,7 +2,7 @@
   "name": "auth-api-starterpack",
   "version": "1.0.0",
   "description": "A Boilerplate application for building REST APIs using express, mongoose in ES6 with code coverage",
-  "author": "Dani Roxberry <dani@makeschool.com>",
+  "author": "Cao Mai <cao.mai@students.makeschool.com>",
   "main": "src/index.js",
   "private": false,
   "engines": {
@@ -42,22 +42,29 @@
     "authenticated",
     "MVC"
   ],
+  "homepage": "https://github.com/aucoeur/rpdr_API#readme",
   "dependencies": {
-    "body-parser": "1.18.2",
-    "cors": "2.8.4",
+    "all": "0.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.4",
     "debug": "^2.4.5",
     "docsify-cli": "4.2.1",
     "dotenv": "^4.0.0",
-    "express": "4.16.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.1.0",
     "express-jwt": "5.3.1",
+    "express-validator": "^5.3.1",
     "http-status": "1.0.1",
     "joi": "10.6.0",
     "jsonwebtoken": "7.1.9",
     "method-override": "^2.3.10",
-    "mongoose": "^4.7.4"
+    "mongoose": "^4.13.20",
+    "util": "^0.12.2"
   },
   "devDependencies": {
-    "chai": "4.1.2",
+    "chai": "^4.1.2",
     "chai-http": "^4.3.0",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",

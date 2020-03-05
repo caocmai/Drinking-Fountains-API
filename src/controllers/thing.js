@@ -2,7 +2,7 @@ const express = require('express')
 
 const Fountain = require('../models/fountain.js')
 
-const router = express.Router(); // eslint-disable-line new-cap
+// const router = express.Router(); // eslint-disable-line new-cap
 
 // GET /api/thing
 // router.get('/', (req, res) => {
@@ -13,29 +13,33 @@ const router = express.Router(); // eslint-disable-line new-cap
 
 // TODO: Add more routes.
 
-// GET /api/champ
-router.get('/', (req, res) => {
+
+module.exports = (app) => {
+
+// GET all
+app.get('/api/all', (req, res) => {
   Fountain.find().then(fountain => {
-    res.send({ fountain })
+    res.send(fountain)
   })
 })
-// GET all
-router.get('/fountain/:id', (req, res) => {
+
+// GET specific one
+app.get('/api/fountain/:id', (req, res) => {
   Fountain.findById(req.params.id, (err, fountain) => {
-    res.send({ fountain })
+    res.send(fountain)
   })  
 })
 
 // POST one
-router.post('/fountain/new', (req, res) => {
+app.post('/api/fountain/new', (req, res) => {
   Fountain.create(req.body)
-    .then(function(fountain) {
+    .then((fountain) => {
       res.send(fountain)
     })
 })
 
 // PUT/update by ID
-router.put('/fountain/:id', (req, res) => {
+app.put('/api/fountain/:id', (req, res) => {
   const filter = { _id: req.params.id }
   const update = req.body 
   Fountain.findOneAndUpdate(filter, update, {
@@ -47,12 +51,12 @@ router.put('/fountain/:id', (req, res) => {
 });
 
 //DELETE by ID
-router.delete('/fountain/:id', (req, res) => {
+app.delete('/api/fountain/:id', (req, res) => {
   Fountain.findByIdAndRemove(req.params.id)
   .then(function(fountain) {
     return res.send(fountain)
   })
 });
 
-
-module.exports = router;
+};
+// module.exports = router;
