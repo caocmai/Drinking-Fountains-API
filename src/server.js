@@ -6,14 +6,11 @@ require('./data/database');
 
 
 const app = require('./config/express');
-const router = require('./controllers/fountain.js');
 
 const port = process.env.PORT || 3000
 
 
 //Need to add this if using the app.get routing, instead of route.get
-require('./controllers/fountain.js');
-
 
 // mongoose.Promise = Promise;
 // connect to mongo db
@@ -29,7 +26,6 @@ require('./controllers/fountain.js');
 // # TODO: Any additional config changes belong here.
 
 // Routes
-app.use(router);
 
 // module.parent check is required to support mocha watch
 // src: https://github.com/mochajs/mocha/issues/1912
