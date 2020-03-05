@@ -21,17 +21,17 @@ after((done) => {
 describe('## Thing APIs', () => {
   // TODO: Implement more tests.
 
-  it('should load homepage', () => {
-    chai.request(app)
-      .get('/api/fountain')
-      .end((err, res) => {
-        if (err) {
-          return done(err);
-        }
-        res.status.should.be.equal(200);
-        return done();
-      })
-  })
+  // it('should load homepage', () => {
+  //   chai.request(app)
+  //     .get('/api/fountain/all')
+  //     .end((err, res) => {
+  //       if (err) {
+  //         return done(err);
+  //       }
+  //       res.status.should.be.equal(200);
+  //       return done();
+  //     })
+  // })
 
 
   

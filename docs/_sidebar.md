@@ -1,0 +1,3 @@
+- [Home](/)
+  - [Installing](/#/Add)
+- [Usage](endpoints.md)
