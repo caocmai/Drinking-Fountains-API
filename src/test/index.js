@@ -1,4 +1,4 @@
-const app = require("../index.js");
+const app = require("../server.js");
 const mongoose = require('mongoose');
 const chai = require('chai'); // eslint-disable-line import/newline-after-import
 const chaiHttp = require("chai-http");

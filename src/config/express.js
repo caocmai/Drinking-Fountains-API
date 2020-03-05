@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const checkAuth = require('../controllers/auth');
 const cors = require('cors');
-const routes = require('../controllers/index.js');
+const routes = require('../controllers/fountain.js');
 
 const app = express();
 

@@ -1,5 +1,5 @@
 const express = require('express');
-const thingRoutes = require('./thing.js');
+const thingRoutes = require('./fountain.js');
 const authRoutes = require('./auth.js');
 
 const router = express.Router(); // eslint-disable-line new-cap
@@ -8,6 +8,6 @@ const router = express.Router(); // eslint-disable-line new-cap
 
 router.use('/thing', thingRoutes);
 
-router.use('/auth', authRoutes);
+// router.use('/auth', authRoutes);
 
 module.exports = router;
