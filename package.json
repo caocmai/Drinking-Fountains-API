@@ -60,7 +60,7 @@
     "joi": "10.6.0",
     "jsonwebtoken": "7.1.9",
     "method-override": "^2.3.10",
-    "mongoose": "^4.13.20",
+    "mongoose": "^5.7.5",
     "util": "^0.12.2"
   },
   "devDependencies": {
