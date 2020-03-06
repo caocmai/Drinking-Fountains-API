@@ -211,6 +211,15 @@ An example:
 You will be rerouted back to the main screen
 
 
-# Additional Info
+# For Grading Purposes: (Will delete once project is graded)
+inside .env file:
+NODE_ENV=development
+PORT=4040
+JWT_SECRET=0a6b944d-d2fb-46fc-a85e-0295c986cd9f
+MONGO_HOST=mongodb://localhost:27017/auth-api-starterpack
+MONGO_PORT=27017
+MONGODB_URI=mongodb://localhost/api
+
+
 jwt token: 
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTYwYjkwYmQ3NWFiYzJjNzk1ZGZjMDgiLCJ1c2VybmFtZSI6IiB1c2VybmFtZSwiLCJpYXQiOjE1ODMzOTg0MTMsImV4cCI6MTU4ODU4MjQxM30.E3009bQO55Wpi_V7t3m_SR6nkAUENbfXzHekwAsuVaY

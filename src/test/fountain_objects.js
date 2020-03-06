@@ -85,6 +85,22 @@ describe('Queen API endpoints', () => {
     })
   })
 
+  it('should POST a new fountain', (done) => {
+    chai.request(app)
+      .post('/api/fountain/new')
+      .set('authorization', 'Bearer ' + process.env.TOKEN)
+      .send(sampleFountain)
+      .then(res => {
+        assert.equal(res.status, 200)
 
+        // make sure it's saved to db
+        Fountain.find({city: 'Houston'}).then(result => {
+          assert.equal(result.length, 1)
+        })
+        return done()
+      }).catch(err => {
+        return done(err)
+      })
+  })
 
 })

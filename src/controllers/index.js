@@ -21,7 +21,7 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/*', (req, res) => {
-    res.status(400).json({ message: 'None route found.' });
+    res.status(400).json({ hello: 'Documentation for this API: https://caocmai.github.io/drinking-fountains-api/' });
 });
 
 
