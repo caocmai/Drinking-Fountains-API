@@ -55,7 +55,7 @@ Send a `GET` request to URL `localhost:4040/api/fountain/all` to get a list of a
 
 Data will look like:
 
-```json
+```
 [
     {
         id: 5e6094d626c1b313bcf24ac1, 
