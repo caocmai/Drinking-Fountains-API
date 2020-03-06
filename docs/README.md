@@ -20,7 +20,7 @@ npm start
 ```
 
 ## Technology Used
-This API was created using Node.js, Express, and MongoDB. Postman is recommended to update content in the API. 
+This API was created using Node.js, Express, and MongoDB. Postman is recommended to signup/login, and add/update content to the API. 
 
 # Authentication and Authorization
 Authentication is required in order to post or update content in this API
@@ -40,6 +40,10 @@ After siging up to login send a `POST` request to the URL `localhost:4040/user/l
 username:
 password:
 ```
+
+## To Log Out
+
+After siging up to login send a `POST` request to the URL `localhost:4040/user/logout` and you will be logged out.
 
 # Making Requests
 

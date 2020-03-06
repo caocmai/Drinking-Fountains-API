@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const checkAuth = require('../controllers/auth');
 const cors = require('cors');
-const routes = require('../controllers/index.js');
+const allRoutes = require('../controllers/all_routes.js');
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(expressValidator());
 app.use(checkAuth);
 
 // Mount all routes on /api path.
-app.use('/', routes);
+app.use('/', allRoutes);
 
 
 // #TODO: Additional non-API routes cgo here.

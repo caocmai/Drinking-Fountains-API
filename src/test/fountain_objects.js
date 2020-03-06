@@ -49,7 +49,7 @@ describe('Fountain Object', () => {
     })
   })
 
-  // Test GET All Queens
+  // Test GET all fountains
   it('should show all fountains', (done) => {
     let fountain = new Fountain(sampleFountain);
     fountain.save().then(() => {
@@ -68,6 +68,7 @@ describe('Fountain Object', () => {
     })
   })
 
+  // Test GET a specific fountain
   it('should show a specific fountain', (done) => {
     let fountain = new Fountain(sampleFountain);
     fountain.save().then((fountainObj) => {
@@ -85,6 +86,7 @@ describe('Fountain Object', () => {
     })
   })
 
+  // Test POST a fountain
   it('should POST a new fountain', (done) => {
     chai.request(app)
       .post('/api/fountain/new')
