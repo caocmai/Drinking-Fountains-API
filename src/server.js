@@ -6,7 +6,7 @@ require('./data/database');
 
 const app = require('./config/express');
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 
 //Need to add this if using the app.get routing, instead of route.get
