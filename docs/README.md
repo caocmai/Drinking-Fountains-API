@@ -95,7 +95,7 @@ The data will look like the following:
     zip-code: "94109", 
     longitude: 38.8951,
     latitudes: -77.0364,
-    number_of_spigots: 1
+    number_of_spouts: 1
 }
 ```
 
