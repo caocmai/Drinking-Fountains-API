@@ -37,14 +37,14 @@ after((done) => {
 //   // TODO: Implement tests.
 // });
 
-describe('Queen API endpoints', () => {
+describe('Fountain Object', () => {
   beforeEach((done) => {
     User.create({username: 'sampleuser', password: 'samplepassword'})
     done()
   })
 
   afterEach((done) => {
-    User.findOneAndRemove({username: 'test_user1'}).then(() => {
+    User.findOneAndRemove({username: 'sampleuser'}).then(() => {
       Fountain.findOneAndRemove({city: 'Houston'}).then(() => done())
     })
   })
