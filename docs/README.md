@@ -127,7 +127,7 @@ The data will look like the following:
 ## GET a Specific Amenity of a Specific Drinking Fountain
 To get all a specific nearby that particular driking fountain
 send a GET request that has the specific id of the fountain and the specific id of the amenity.<br><br>
-The format: `localhost:4040/api/fountain/<id>/amenity/`<br>
+The format: `localhost:4040/api/fountain/<fountainiID>/amenity/<amenityID>`<br>
 An example: `localhost:4040/api/fountain/5e60bfb6ace9583018558ae3/amenity/5e61dd6d45f07e49a952c70f`<br><br>
 The data will look like the following:
 ```json

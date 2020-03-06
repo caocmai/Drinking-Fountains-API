@@ -30,7 +30,7 @@ router.post('/new', (req, res) => {
   }
 })
 
-// PUT/update by ID
+// PUT/update by ID at api/fountain/<fountainID>/update
 router.put('/:id/update', (req, res) => {
 
   if (!req.user) {
@@ -48,7 +48,7 @@ router.put('/:id/update', (req, res) => {
   }
 });
 
-//DELETE by ID
+//DELETE by ID at api/fountain/<fountainID>/delete
 router.delete('/:id/delete', (req, res) => {
   if (req.user){
     Fountain.findByIdAndRemove(req.params.id)

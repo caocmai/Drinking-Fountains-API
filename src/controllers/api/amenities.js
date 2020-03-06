@@ -4,7 +4,7 @@ const Amenity = require('../../models/amenity');
 
 const router = express.Router(); // eslint-disable-line new-cap
 
-// To get all amenities
+// To get all amenities at api/fountain/<fountainID>/amenity
 router.get('/', (req, res) => {
     Amenity.find().lean().then(result => {
         res.json(result);
@@ -13,14 +13,14 @@ router.get('/', (req, res) => {
     });
 });
 
-// Get specific amenity
+// Get specific amenity at api/fountain/<fountainID>/amenity/<amenityID>
 router.get('/:amenityID', (req, res) => {
     Amenity.findById(req.params.amenityID, (err, amenity) => {
       res.send(amenity)
     })  
   })
 
-// create an amenity
+// create an amenity at api/fountain/<fountainID>/amenity/new
 router.post("/new", (req, res) => {
     let fountainID = req.fountainID;
     if (!req.user) {
@@ -42,7 +42,7 @@ router.post("/new", (req, res) => {
     }
 });
 
-// Update an amenity
+// Update an amenity at at api/fountain/<fountainID>/amenity/<amenityID>/update
 router.put("/:amenityID/update", (req, res) => {
     if (!req.user) {
         return res.status(401); // UNAUTHORIZED
@@ -64,7 +64,7 @@ router.put("/:amenityID/update", (req, res) => {
     }
 });
 
-// Delete specfic amenity
+// Delete specfic amenity at api/fountain/<fountainID>/amenity/<amenityID>/delete
 router.delete("/:amenityID/delete", (req, res) => {
     let fountainID = req.fountainID;
     if (!req.user) {
