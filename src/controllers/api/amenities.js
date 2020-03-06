@@ -43,7 +43,7 @@ router.post("/new", (req, res) => {
 });
 
 // Update an amenity
-router.put("/:amenityID", (req, res) => {
+router.put("/:amenityID/update", (req, res) => {
     if (!req.user) {
         return res.status(401); // UNAUTHORIZED
     } else {
@@ -65,7 +65,7 @@ router.put("/:amenityID", (req, res) => {
 });
 
 // Delete specfic amenity
-router.delete("/:amenityID", (req, res) => {
+router.delete("/:amenityID/delete", (req, res) => {
     let fountainID = req.fountainID;
     if (!req.user) {
         return res.status(401); // UNAUTHORIZED

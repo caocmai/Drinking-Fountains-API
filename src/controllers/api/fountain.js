@@ -4,16 +4,6 @@ const Fountain = require('../../models/fountain.js')
 const amenitiesRoutes = require('../api/amenities')
 const router = express.Router(); // eslint-disable-line new-cap
 
-// GET /api/thing
-// router.get('/', (req, res) => {
-//   Thing.find().then(things => {
-//     res.send({ things })
-//   })
-// })
-
-// TODO: Add more routes.
-
-
 // GET all at api/fountain/all
 router.get('/all', (req, res) => {
   Fountain.find().then(fountain => {
@@ -42,18 +32,6 @@ router.post('/new', (req, res) => {
 
 // PUT/update by ID
 router.put('/:id/update', (req, res) => {
-//   if (req.user) {
-//   const filter = { _id: req.params.id }
-//   const update = req.body 
-//   Fountain.findOneAndUpdate(filter, update, {
-//     new: true
-//   })
-//   .then(function(fountain) {
-//     return res.send(fountain)
-//   })
-// } else {
-//   return res.status(401)
-// }
 
   if (!req.user) {
     res.status(401)
@@ -83,7 +61,7 @@ router.delete('/:id/delete', (req, res) => {
 });
 
 
-//------------ QUIZ ROUTES ------------\\
+// Middleware nested route for the amenity
 router.use('/:fountainID/amenity', function (req, res, next) {
   req.fountainID = req.params.fountainID;
   next()
