@@ -16,7 +16,7 @@ sampleUser = {
 
 describe("User", function() {
 
-  it("should not be able to login if they have not registered", function(done) {
+  it("should not be able to login if they are not registered", function(done) {
     agent
       .post("/user/login")
       .send({ username: "wrong username", password: "password" })
@@ -45,6 +45,7 @@ describe("User", function() {
       })
   })
 
+  // Login 
   it('should be able to log in', (done) => {
     let user = new User(sampleUser)
     user.save().then(savedUser => {
@@ -63,19 +64,7 @@ describe("User", function() {
     })
   })
 
-  // login
-  // it("should be able to login", function(done) {
-  //   agent
-  //     .post("/user/login")
-  //     .send({ username: "testone", password: "password" })
-  //     .end(function(err, res) {
-  //       res.should.have.status(200);
-  //       agent.should.have.cookie("pToken");
-  //       done();
-  //     });
-  // });
-
-  // logout
+  // Logout
   it("should be able to logut", function(done) {
     agent.get('/user/logout').end(function(err, res) {
       res.should.have.status(200);

@@ -1,7 +1,7 @@
 const express = require('express')
 
 const Fountain = require('../../models/fountain.js')
-
+const amenitiesRoutes = require('../api/amenities')
 const router = express.Router(); // eslint-disable-line new-cap
 
 // GET /api/thing
@@ -81,5 +81,12 @@ router.delete('/:id/delete', (req, res) => {
     res.status(401)
   } 
 });
+
+
+//------------ QUIZ ROUTES ------------\\
+router.use('/:fountainID/amenities', function (req, res, next) {
+  req.fountainID = req.params.fountainID;
+  next()
+}, amenitiesRoutes);
 
 module.exports = router;

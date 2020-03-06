@@ -16,9 +16,15 @@ router.use('/api', apiRoutes);
 //     res.redirect('https://caocmai.github.io/drinking-fountains-api/')
 // });
 
-router.get('/*', (req, res) => {
-    res.status(400).json({ message: 'no route found.' });
+router.get('/about', (req, res) => {
+    res.status(400).json({ message: 'This is an API to find/add drinking fountains' });
 });
+
+router.get('/*', (req, res) => {
+    res.status(400).json({ message: 'None route found.' });
+});
+
+
 
 
 module.exports = router;
