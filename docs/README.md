@@ -221,11 +221,11 @@ You will be rerouted back to the main screen
 
 # For Grading Purposes: (Will delete once project is graded)
 inside .env file:<br>
-NODE_ENV=development
-PORT=4040
-JWT_SECRET=0a6b944d-d2fb-46fc-a85e-0295c986cd9f
-MONGO_HOST=mongodb://localhost:27017/auth-api-starterpack
-MONGO_PORT=27017
+NODE_ENV=development<br>
+PORT=4040<br>
+JWT_SECRET=0a6b944d-d2fb-46fc-a85e-0295c986cd9f<br>
+MONGO_HOST=mongodb://localhost:27017/auth-api-starterpack<br>
+MONGO_PORT=27017<br>
 MONGODB_URI=mongodb://localhost/api
 
 
