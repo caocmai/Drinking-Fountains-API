@@ -4,7 +4,7 @@
 
 Welcome to the Water Fountain Finer API. This API allows for viewing and creating drinking water fountains based on city, zip_code, longitude, and latitude. 
 
-This API permits only authenicated users to add and update driking fountains and nearby amenities associated with the specific driking fountain. However, non authenicated users are still able to view driking fountains and its nearby amenities. 
+This API permits only authenicated users to add and update drinking fountains and nearby amenities associated with the specific driking fountain. However, non authenicated users are still able to view driking fountains and its nearby amenities. 
 
 ## Installation
 
