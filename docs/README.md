@@ -88,7 +88,7 @@ The format: `localhost:4040/api/fountain/<fountainID>`<br>
 An example: `localhost:4040/api/fountain/5e60bfb6ace9583018558ae3`<br><br>
 The data will look like the following:
 
-```json
+```
 {
     id: 5e6094d626c1b313bcf24ac1, 
     city: "San Fransico",
@@ -107,7 +107,7 @@ An example: `localhost:4040/api/fountain/5e60bfb6ace9583018558ae3/amenity`<br><b
 The data will look like the following:
 
 
-```json
+```
 [
     {
         "_id": "5e61dd6845f07e49a952c70b",
