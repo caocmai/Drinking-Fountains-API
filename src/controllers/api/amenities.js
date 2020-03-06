@@ -13,15 +13,79 @@ router.get('/', (req, res) => {
     });
 });
 
-// Get specific amenaity
-router.get('/:fountainID', (req, res) => {
-    let fountainID = req.params.fountainID
-    Fountain.findOne({ fountainID: fountainID }).then(result => {
-        res.json(result);
-    })
-})
+// Get specific amenity
+router.get('/:amenityID', (req, res) => {
+    Amenity.findById(req.params.amenityID, (err, amenity) => {
+      res.send(amenity)
+    })  
+  })
 
+// create an amenity
+router.post("/new", (req, res) => {
+    let fountainID = req.fountainID;
+    if (!req.user) {
+        return res.status(401); // UNAUTHORIZED
+    } else {
+        // INSTANTIATE INSTANCE OF MODEL
+        const amenity = new Amenity(req.body);
+        
+        // SAVE INSTANCE OF Quiz MODEL TO DB
+        amenity.save().then(() =>{
+            return Fountain.findOne({ _id: fountainID });
+        }).then(fountain => {
+            fountain.amenities.unshift(amenity)
+            fountain.save()
+            res.send({amenity})
+            // res.redirect(`/`);
+        }).catch(err => { console.log(err) });
+    // return done()
+    }
+});
 
+// Update an amenity
+router.put("/:amenityID", (req, res) => {
+    if (!req.user) {
+        return res.status(401); // UNAUTHORIZED
+    } else {
+        Amenity.findOneAndUpdate({ amenityID: req.params.amenityID }).then(amenity => {
+            amenity.name = req.body.name;
+            amenity.quantity = req.body.quantity;
+            amenity.more_info = req.body.more_info;
+            amenity.save();
+        }).then(fountain => {
+            fountain.amenities.pop(amenity);
+            fountain.amenities.unshift(amenity);
+            res.json((fountain, amenity));
+            // res.redirect(`/`);
+            return topic.save();
+        }).catch(err => {
+            console.log(err.message);
+        });
+    }
+});
 
+// Delete specfic amenity
+router.delete("/:amenityID", (req, res) => {
+    let fountainID = req.fountainID;
+    if (!req.user) {
+        return res.status(401); // UNAUTHORIZED
+    } else {
+        // Delete INSTANCE OF Quiz MODEL TO DB
+        // amenity = Amenity.findOneAndDelete({ amenityID: req.params.amenityID })
+        const amenity = Amenity.deleteOne( {_id: req.params.amenityID} )
+            .then(() => {
+                return Fountain.findOne({ _id: fountainID });
+            })
+            .then(fountain => {
+                fountain.amenities.pop(amenity);
+                res.json(fountain);
+                // res.redirect(`/`);
+                return fountain.save();
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+});
 
 module.exports = router;

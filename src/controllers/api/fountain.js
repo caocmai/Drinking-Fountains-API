@@ -84,7 +84,7 @@ router.delete('/:id/delete', (req, res) => {
 
 
 //------------ QUIZ ROUTES ------------\\
-router.use('/:fountainID/amenities', function (req, res, next) {
+router.use('/:fountainID/amenity', function (req, res, next) {
   req.fountainID = req.params.fountainID;
   next()
 }, amenitiesRoutes);

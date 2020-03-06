@@ -97,6 +97,9 @@ The data will look like the following:
 
 ## Add a 
 
+jwt token: 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTYwYjkwYmQ3NWFiYzJjNzk1ZGZjMDgiLCJ1c2VybmFtZSI6IiB1c2VybmFtZSwiLCJpYXQiOjE1ODMzOTg0MTMsImV4cCI6MTU4ODU4MjQxM30.E3009bQO55Wpi_V7t3m_SR6nkAUENbfXzHekwAsuVaY
+
 ## Remove a 
 
 ## Edit a 
