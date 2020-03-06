@@ -7,7 +7,7 @@ assert = require("assert");
 mongoose.Promise = global.Promise;
 
 const url = process.env.MONGODB_URI
-// mongoose.connect(mongo_uri)
+// mongoose.connect(url)
 
 mongoose.connect(
     url,
