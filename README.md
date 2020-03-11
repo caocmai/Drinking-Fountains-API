@@ -148,7 +148,7 @@ The data will look like the following:
 }
 ```
 
-### POST a New Drinking Fountain Spot
+### POST or Add a New Drinking Fountain Spot
 Send a `POST` request to 
 ```localhost:4040/api/fountain/new```<br><br>
 Make sure to populate the required fields: <br>
@@ -161,7 +161,7 @@ number_of_spouts:
 ```
 
 
-### POST a New Amenity of a drinking Fountain
+### POST or Add a New Amenity of a drinking Fountain
 Send a `POST` request with the specific id of the drinking fountain you want to add an amenity.<br><br>
 The format:
 `localhost:4040/api/fountain/<fountainID>/amenity/new`<br>
