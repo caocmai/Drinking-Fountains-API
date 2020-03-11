@@ -29,7 +29,7 @@ router.post("/new", (req, res) => {
         // INSTANTIATE INSTANCE OF MODEL
         const amenity = new Amenity(req.body);
         
-        // SAVE INSTANCE OF Quiz MODEL TO DB
+        // SAVE INSTANCE OF Amenity MODEL TO DB
         amenity.save().then(() =>{
             return Fountain.findOne({ _id: fountainID });
         }).then(fountain => {
@@ -70,7 +70,7 @@ router.delete("/:amenityID/delete", (req, res) => {
     if (!req.user) {
         return res.status(401); // UNAUTHORIZED
     } else {
-        // Delete INSTANCE OF Quiz MODEL TO DB
+        // Delete INSTANCE OF Amenity MODEL TO DB
         // amenity = Amenity.findOneAndDelete({ amenityID: req.params.amenityID })
         const amenity = Amenity.deleteOne( {_id: req.params.amenityID} )
             .then(() => {

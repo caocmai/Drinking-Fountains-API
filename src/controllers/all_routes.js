@@ -16,15 +16,15 @@ router.use('/api', apiRoutes);
 //     res.redirect('https://caocmai.github.io/drinking-fountains-api/')
 // });
 
+// /about route
 router.get('/about', (req, res) => {
     res.status(400).json({ message: 'This is an API to find/add drinking fountains' });
 });
 
+// /whatever route
 router.get('/*', (req, res) => {
     res.status(400).json({ hello: 'Documentation for this API: https://caocmai.github.io/drinking-fountains-api/' });
 });
-
-
 
 
 module.exports = router;
