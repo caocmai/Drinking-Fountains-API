@@ -47,7 +47,7 @@ To logout after logging in send a `POST` request to the URL `localhost:4040/user
 
 ## Making Requests
 
-This API has no HTML and only returns JSON data. Below are the processes to make requests with this API
+This API has no HTML and only returns JSON data. Below are the processes to make requests for this API
 
 ### GET All Drinking Fountains 
 
