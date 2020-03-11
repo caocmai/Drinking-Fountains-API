@@ -2,9 +2,9 @@
 
 ## Description
 
-Welcome to the Water Fountain Finder API. This API allows for viewing and creating drinking water fountain spots based on city, zip_code, longitude, and latitude. Additionally, each one particular drinking fountain can have a list of nearby amenities in JSON format. An amenity could be something like a playground, a park, a baseball field, ect.
+Welcome to the Water Fountain Finder API. This API allows for viewing and creating drinking water fountain spots based on city, zip_code, longitude, and latitude. Additionally, each one particular drinking fountain spot can have a list of nearby amenities in JSON format. An amenity could be something like a playground, a park, a baseball field, ect.
 
-This API permits only authenicated users to add and update drinking fountains and nearby amenities associated with the specific drinking fountain. However, non authenicated users are still able to view drinking fountains and its nearby amenities. 
+This API permits only authenicated users to add and update drinking fountains and nearby amenities associated with the specific drinking fountain. However, non authenicated users are still able to view drinking fountains and its amenities. 
 
 ## Installation
 
