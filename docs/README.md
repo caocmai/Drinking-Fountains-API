@@ -138,7 +138,7 @@ send a `GET` request that has the specific id of the fountain and the specific i
 The format: `localhost:4040/api/fountain/<fountainiID>/amenity/<amenityID>`<br>
 An example: `localhost:4040/api/fountain/5e60bfb6ace9583018558ae3/amenity/5e61dd6d45f07e49a952c70f`<br><br>
 The data will look like the following:
-```json
+```
 {
     "_id": "5e61dd6d45f07e49a952c70f",
     "name": "Baseball Field",
