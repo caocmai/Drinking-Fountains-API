@@ -23,7 +23,7 @@ npm start
 This API was created using Node.js, Express, and MongoDB. Postman is recommended to signup/login, and add/update content to the API. 
 
 ## Authentication and Authorization
-Authentication is required in order to post or update content in this API
+Authentication is required in order to post or edit content in this API.
 
 ### To Sign Up
 
@@ -43,7 +43,7 @@ password:
 
 ### To Log Out
 
-After siging up to login send a `POST` request to the URL `localhost:4040/user/logout` and you will be logged out.
+To logout after logging in send a `POST` request to the URL `localhost:4040/user/logout` and you will be logged out.
 
 ## Making Requests
 
@@ -218,16 +218,5 @@ An example:
 `localhost:4040/api/fountain/5e60bfb6ace9583018558ae3/amenity/5e61dd6d45f07e49a952c70f/delete`<br><br>
 You will be rerouted back to the main screen
 
-
-## For Grading Purposes: (Will delete once project is graded)
-inside .env file:<br>
-NODE_ENV=development<br>
-PORT=4040<br>
-JWT_SECRET=0a6b944d-d2fb-46fc-a85e-0295c986cd9f<br>
-MONGO_HOST=mongodb://localhost:27017/auth-api-starterpack<br>
-MONGO_PORT=27017<br>
-MONGODB_URI=mongodb://localhost/api
-
-
-jwt token: 
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTYwYjkwYmQ3NWFiYzJjNzk1ZGZjMDgiLCJ1c2VybmFtZSI6IiB1c2VybmFtZSwiLCJpYXQiOjE1ODMzOTg0MTMsImV4cCI6MTU4ODU4MjQxM30.E3009bQO55Wpi_V7t3m_SR6nkAUENbfXzHekwAsuVaY
+## Questions or Comments?
+Email me at cao.mai@students.makeschool.com
