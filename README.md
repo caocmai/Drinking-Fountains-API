@@ -43,7 +43,7 @@ password:
 
 ### To Log Out
 
-After siging up to login send a `POST` request to the URL `localhost:4040/user/logout` and you will be logged out.
+To logout after logging in send a `POST` request to the URL `localhost:4040/user/logout` and you will be logged out.
 
 ## Making Requests
 
