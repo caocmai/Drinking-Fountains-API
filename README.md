@@ -23,7 +23,7 @@ npm start
 This API was created using Node.js, Express, and MongoDB. Postman is recommended to signup/login, and add/update content to the API. 
 
 ## Authentication and Authorization
-Authentication is required in order to post or update content in this API
+Authentication is required in order to add or edit content in this API
 
 ### To Sign Up
 
