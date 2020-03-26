@@ -19,6 +19,25 @@ Then run:
 npm start
 ```
 
+## Run Locally
+
+To run this API locally and using Postman to view or edit content follow the steps below:
+
+1. Open root project in code editor 
+
+2. Activate MongoDB 
+```bash
+mongod
+```
+
+3. Open a new bash window and run project with Nodemon. Needs to be run concurrently with MongoDb
+```
+nodemon
+```
+
+API should now be accessible for all users and editable for logged in users via Postman at:
+`http://localhost:4040 `
+
 ## Technology Used
 This API was created using Node.js, Express, and MongoDB. Postman is recommended to signup/login, and add/update content to the API. 
 
